@@ -1,0 +1,16 @@
+-
+    var menuList = [
+        {link: '#', title: 'о проекте'},
+        {link: '#', title: 'оферта'},
+        {link: '#', title: 'помощь'},
+        {link: '#', title: 'партнёрам'},
+        {link: '#', title: 'регистрация'}
+    ];
+
+footer.main-footer
+    nav.main-footer__nav
+        ul.nav__list
+            each item in menuList
+                li.nav__item
+                    p.nav__link= item.title
+    p.main-footer__made-by сделано c ♥ в СПб

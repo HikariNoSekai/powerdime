@@ -1,0 +1,56 @@
+mixin itemCard(card, btns)
+    .item-card--wrapper
+        img.logo(src="img/logo.svg" title="logo" alt="logo")
+        .item-card__left--wrapper
+            p.item-card__price-text рекомендуемая цена
+            p.item-card__price= card.price
+            case card.rating
+                when 1
+                    img.item-card__rating(src="img/rating/one-star.png" alt="one star rating" title="one star")
+                when 2
+                    img.item-card__rating(src="img/rating/two-stars.png" alt="two stars rating" title="two stars")
+                when 3
+                    img.item-card__rating(src="img/rating/three-stars.png" alt="three stars rating" title="three stars")
+                when 4
+                    img.item-card__rating(src="img/rating/four-stars.png" alt="four stars rating" title="four stars")
+                when 5
+                    img.item-card__rating(src="img/rating/five-stars.png" alt="five stars rating" title="five stars")
+                default
+                    p.item-card__rating--default No rating
+            p.item-card__rating-descr рейтинг на Яндекс Маркет
+        img.item-card__item-img(src=card.img title=card.name alt=card.name)
+        case selected
+            when 'Home'
+                .item-card__right--wrapper
+                    p.item-card__card-name= card.fullname
+                    p.item-card__descr= card.descr
+                    .item-card__bet-btn--wrapper
+                        each btn in btns
+                            a.powerdime-btn.item-card__bet-btn(href="#")=btn.chance
+            when 'Wallet'
+                .wallet__right--wrapper
+                    p.item-card__card-name= card.fullname
+                    input.powerdime-btn.wallet__bet-btn(type="button" value="4 090₽ - 5%")
+                    .wallet__wallet-btns--wrapper
+                        a.powerdime-btn.wallet__btn(href="#")
+                            img.wallet__img(src="" title="" alt="")
+                            span.wallet__price 0.15567
+                        a.powerdime-btn.wallet__btn(href="#")
+                            img.wallet__img(src="" title="" alt="")
+                            span.wallet__price 0.15567
+                        a.powerdime-btn.wallet__btn(href="#")
+                            img.wallet__img(src="" title="" alt="")
+                            span.wallet__price 0.15567
+            when "Purchase"
+                .purchase__right--wrapper
+                    p.item-card__card-name= card.fullname
+                    input.powerdime-btn.purchase__bet-btn(type="button" value="4 090₽ - 5%")
+                    a.powerdime-btn.wallet__btn.purchase__btn(href="#")
+                        img.wallet__img(src="" title="" alt="")
+                        span.wallet__price 0.15567
+                    a.purchase__copy-btn(href="#")
+                        img.purchase__copy(src="./img/copy-icon.png" title="copy" alt="copy")
+                    p.purchase__title оплатите 0,0094 btc на адрес:
+                    p.purchase__code 19TYhqeuSHbb67QdzEy3YbTXHrgqEftx9a
+                    img.purchase__qr-code(src="./img/qr-code.png" title="qr-code" alt="qr-code")
+                    p.purchase__time 13:37

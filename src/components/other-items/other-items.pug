@@ -1,0 +1,12 @@
+-
+    var otherItems = [
+        {img: 'img/items/apple-watch.png', name: 'Apple Watch', btnText: 'купи за 290₽'},
+        {img: 'img/items/watch.png', name: 'Watch', btnText: 'купи за 290₽'},
+        {img: 'img/items/phone.png', name: 'Phone', btnText: 'купи за 790₽'}
+    ];
+
+section.other-items
+    each item in otherItems
+        .other-item
+            img.other__img(src=item.img title=item.name alt=item.name)
+            input.powerdime-btn.other__btn(type="button" value=item.btnText)

@@ -1,0 +1,36 @@
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 130px;
+	transform: rotate(-10deg);
+	will-change: transform;
+}
+
+.main-header__company-logo{
+    size: 148px 60px;
+    transform: skew(-10deg);
+}
+
+.main-header__title{
+    margin-left: 32px;
+    transform: rotate(10deg);
+}
+
+.main-header__login-link{
+    display: flex;
+    margin-left: 104px;
+    font-family: $fira;
+    color: #ababab;
+}
+
+.login__icon{
+    size: 12px 16px;
+    transform: skew(-10deg);
+}
+
+.login__title{
+    transform: skew(-10deg);
+    margin-left: 10px;
+    text-transform: uppercase;
+}

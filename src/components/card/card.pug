@@ -1,0 +1,21 @@
+-
+    var cardArr = {
+        fullname: 'Apple iPhone X 256 GB',
+        name: 'iPhone X',
+        price: '80 990 ₽',
+        rating: 4,
+        img: 'img/items/iphone.png',
+        descr: `Новенький iPhone X ждёт тебя, выбери насколько ты везучий`,
+    };
+
+    var betBtns = [
+        {chance: '890₽ - 1%'},
+        {chance: '1 690₽ - 2%'},
+        {chance: '4 090₽ - 5%'},
+        {chance: '8 099₽ - 10%'},
+        {chance: '80 990₽ - 100%'}
+    ];
+
+section.card
+    include ../item-card/item-card
+    +itemCard(cardArr, betBtns)

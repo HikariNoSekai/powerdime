@@ -1,0 +1,9 @@
+extends ../template.pug
+block link
+	-var selected = 'Purchase';
+block title
+	| Purchase page
+block content
+	main.maincontent
+		include ../components/card/card
+		include ../components/other-items/other-items

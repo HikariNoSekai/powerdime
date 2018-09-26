@@ -1,0 +1,73 @@
+:root {
+  --body-color: #fff;
+  --basic-font: 16px, sans-serif;
+  --accent-color: rgba(255, 227, 11, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font: var(--basic-font);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
+  background: var(--body-color);
+}
+
+.maincontent {
+  flex: 1 0;
+}
+
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.flex-container {
+  display: flex;
+  max-width: 820px;
+}
+
+/**
+ *
+ * Global settings
+ *
+ */
+
+body{
+  /* overflow: hidden; */
+}
+
+.powerdime-btn{
+  font-family: $fira;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 156px;
+  border: none;
+  border-radius: 21px;
+  background: var(--accent-color);
+  color: $grey;
+  cursor: pointer;
+  transform: skew(-10deg);
+  text-align: center;
+}
